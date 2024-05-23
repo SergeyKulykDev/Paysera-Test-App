@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/receive_image_content_description"
+        android:src="@drawable/ic_circle_arrow_down_solid"
+        app:tint="@color/green" />
+
+    <TextView
+        style="@style/Widget.App.Text.SellReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/receive" />
+
+    <TextView
+        android:id="@+id/receive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_weight="1"
+        android:textAlignment="textEnd"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        tools:text="+110.30" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/receive_currency"
+        style="@style/Widget.App.CurrencyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        tools:text="USD" />
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.App.CurrencyButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="icon">@drawable/ic_chevron_down_solid</item>
+        <item name="iconGravity">end</item>
+        <item name="iconTint">@color/button_text_color</item>
+    </style>
+
+
+    <style name="Widget.App.Toolbar.Home" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/blue</item>
+        <item name="title">@string/currency_converter</item>
+        <item name="titleCentered">true</item>
+        <item name="titleTextAppearance">@style/TextAppearance.App.Headline6</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <style name="Widget.App.Text.Title.Small" parent="Widget.MaterialComponents.TextView">
+        <item name="textAllCaps">true</item>
+        <item name="titleTextAppearance">@style/TextAppearance.App.Body2</item>
+    </style>
+
+    <style name="Widget.App.Text.SellReceive" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.App.Body1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.App.Text.Error.Synchronize" parent="Widget.MaterialComponents.TextView">
+        <item name="android:background">@color/red</item>
+        <item name="android:text">@string/synchronization_error</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

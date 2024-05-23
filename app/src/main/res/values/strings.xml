@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Paysera Test App</string>
+
+    <string name="currency_converter">Currency converter</string>
+    <string name="my_balances">My Balances</string>
+    <string name="currency_exchange">Currency Exchange</string>
+    <string name="sell">Sell</string>
+    <string name="receive">Receive</string>
+    <string name="sell_edit_text_hint">0.00</string>
+    <string name="submit">Submit</string>
+    <string name="done">Done</string>
+    <string name="currency_converted_title">Currency converted</string>
+    <string name="currency_converted_description">You have converted %s to %s.</string>
+    <string name="currency_converted_description_commission">Commission Fee: %s </string>
+
+    <!--  Errors  -->
+    <string name="synchronization_error">Synchronization error</string>
+
+    <!--  Content Descriptions  -->
+    <string name="sell_image_content_description">Sell Image</string>
+    <string name="receive_image_content_description">Sell Image</string>
+
 </resources>
