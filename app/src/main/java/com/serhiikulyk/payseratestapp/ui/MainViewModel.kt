@@ -77,8 +77,7 @@ class MainViewModel @Inject constructor(
             0.0
         }
         _uiState.update { it.copy(sell = amount) }
-        checkHasMoneyOnBalance(amount)
-        calculateReceivedMoney(amount)
+        updateReceive()
     }
 
     private fun checkHasMoneyOnBalance(amount: Double) {
@@ -114,16 +113,25 @@ class MainViewModel @Inject constructor(
     }
 
     fun onSellCurrencyChanged(currency: String) {
+        if (_uiState.value.receiveCurrency == currency) {
+            _uiState.update { it.copy(error = "Sell currency can't be same to receive") }
+            return
+        }
         _uiState.update { it.copy(sellCurrency = currency) }
-
-        val amount = _uiState.value.sell
-        checkHasMoneyOnBalance(amount)
-        calculateReceivedMoney(amount)
+        updateReceive()
     }
 
     fun onReceiveCurrencyChanged(currency: String) {
+        if (_uiState.value.sellCurrency == currency) {
+            _uiState.update { it.copy(error = "Receive currency can't be same to sell") }
+            return
+        }
         _uiState.update { it.copy(receiveCurrency = currency) }
 
+        updateReceive()
+    }
+
+    private fun updateReceive() {
         val amount = _uiState.value.sell
         checkHasMoneyOnBalance(amount)
         calculateReceivedMoney(amount)
